@@ -14,10 +14,7 @@ import com.masai.Exception.OperatorException;
 import com.masai.Repository.DepartmentRepository;
 import com.masai.Repository.OperatorRepository;
 
-import lombok.extern.slf4j.Slf4j;
-
 @Service
-@Slf4j
 public class AdminServiceImpl implements AdminService {
 
     @Autowired
@@ -28,14 +25,14 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public Department addDepartment(Department d) throws LoginException {
-        
+        // Implement the logic to add a department
         Department savedDepartment = departmentRepository.save(d);
         return savedDepartment;
     }
 
     @Override
     public Department removeDepartment(int id) throws DepartmentException, LoginException {
-       
+        // Implement the logic to remove a department by its ID
         Optional<Department> departmentOptional = departmentRepository.findById(id);
         if (!departmentOptional.isPresent()) {
             throw new DepartmentException("Department not found");
@@ -47,20 +44,21 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public Department modifyDepartment(int id) throws DepartmentException, LoginException {
-        
+        // Implement the logic to modify a department
         Optional<Department> departmentOptional = departmentRepository.findById(id);
         if (!departmentOptional.isPresent()) {
             throw new DepartmentException("Department not found");
         }
         Department department = departmentOptional.get();
-       ;
+        // Implement the logic to modify the department attributes
+        // For example, department.setName("New Name");
         departmentRepository.save(department);
         return department;
     }
 
     @Override
     public Department findDepartmentById(int id) throws DepartmentException, LoginException {
-        
+        // Implement the logic to find a department by its ID
         Optional<Department> departmentOptional = departmentRepository.findById(id);
         if (!departmentOptional.isPresent()) {
             throw new DepartmentException("Department not found");
@@ -70,14 +68,14 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public Operator addOperator(Operator o) throws LoginException {
-       
+        // Implement the logic to add an operator
         Operator savedOperator = operatorRepository.save(o);
         return savedOperator;
     }
 
     @Override
     public Operator removeOperatorById(int id) throws OperatorException, LoginException {
-        
+        // Implement the logic to remove an operator by its ID
         Optional<Operator> operatorOptional = operatorRepository.findById(id);
         if (!operatorOptional.isPresent()) {
             throw new OperatorException("Operator not found");
@@ -88,21 +86,28 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public Operator modifyOperator(int id) throws OperatorException, LoginException {
-       
+    public Operator modifyOperator(int id, Operator o) throws OperatorException, LoginException {
+        // Implement the logic to modify an operator
         Optional<Operator> operatorOptional = operatorRepository.findById(id);
         if (!operatorOptional.isPresent()) {
             throw new OperatorException("Operator not found");
         }
         Operator operator = operatorOptional.get();
         
+        operator.setFirstName(o.getFirstName());
+        operator.setLastName(o.getLastName());
+        operator.setEmail(o.getEmail());
+        operator.setCity(o.getCity());
+        operator.setMobile(o.getMobile());
+        // Implement the logic to modify the operator attributes
+        // For example, operator.setName("New Name");
         operatorRepository.save(operator);
         return operator;
     }
 
     @Override
     public Operator findOperatorById(int id) throws OperatorException, LoginException {
-       
+        // Implement the logic to find an operator by its ID
         Optional<Operator> operatorOptional = operatorRepository.findById(id);
         if (!operatorOptional.isPresent()) {
             throw new OperatorException("Operator not found");
@@ -112,7 +117,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public List<Operator> getAllOperators() throws LoginException {
-        
+        // Implement the logic to get all operators
         List<Operator> allOperators = operatorRepository.findAll();
         return allOperators;
     }

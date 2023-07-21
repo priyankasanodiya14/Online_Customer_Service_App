@@ -70,7 +70,7 @@ public class OperatorServiceImpl implements operatorService {
 	}
 
 	@Override
-	public Issue addCustomerIssue(Issue issue) throws OperatorException {
+	public Issue addCustomerIssue(Issue issue, Integer customerId) throws OperatorException {
 
 		if (issue == null) {
 			throw new OperatorException("Issue can't be null");
@@ -176,9 +176,5 @@ public class OperatorServiceImpl implements operatorService {
 	public boolean lockCustomer(Integer customerId) throws OperatorException {
 		return false;
 	}
-
-	
-	
-
 
 }

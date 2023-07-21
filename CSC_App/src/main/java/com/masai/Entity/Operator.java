@@ -1,5 +1,6 @@
 package com.masai.Entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -23,33 +24,32 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Operator {
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int operatorId;
+public class Operator extends Login {
+	@Column(unique = true)
+	private int operatorId;
 
 	@NotNull(message = "Operator name should not be empty!")
-    private String firstName;
-    private String lastName;
-    
-    @Column(unique = true)
-    @Email(message = "email should be formatted!")
-    @NotNull(message = "Operator name should not be empty!")
-    private String email;
-    private String mobile;
-    private String city;
+	private String firstName;
+	private String lastName;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "department_id")
-    private Department department;
+	@Column(unique = true)
+	@Email(message = "email should be formatted!")
+	@NotNull(message = "Operator name should not be empty!")
+	private String email;
+	private String mobile;
+	private String city;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "login_id")
-    private Login login;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "department_id")
+	private Department department;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "operator", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Call> calls;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "login_id")
+	private Login login;
+
+	@JsonIgnore
+	@OneToMany(mappedBy = "operator", cascade = CascadeType.ALL,fetch = FetchType.LAZY) 
+	private List<Call> calls = new ArrayList<>();
 
 	public Operator(@NotNull(message = "Operator name should not be empty!") String firstName, String lastName,
 			@Email(message = "email should be formatted!") @NotNull(message = "Operator name should not be empty!") String email,
@@ -63,6 +63,5 @@ public class Operator {
 		this.department = department;
 		this.login = login;
 	}
-    
-    
+
 }

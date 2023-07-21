@@ -25,7 +25,7 @@ public interface AdminService {
 
 	Operator removeOperatorById(int id) throws OperatorException, LoginException;
 
-	Operator modifyOperator(int id) throws OperatorException, LoginException;
+	Operator modifyOperator(int id,Operator o) throws OperatorException, LoginException;
 
 	Operator findOperatorById(int id) throws OperatorException, LoginException;
 

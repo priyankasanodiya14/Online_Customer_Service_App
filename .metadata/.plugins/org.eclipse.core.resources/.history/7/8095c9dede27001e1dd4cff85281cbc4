@@ -1,0 +1,35 @@
+package com.masai.Service;
+
+import java.util.List;
+
+import com.masai.Entity.CurrentOperatorSession;
+import com.masai.Entity.Customer;
+import com.masai.Entity.Issue;
+import com.masai.Entity.Login;
+import com.masai.Exception.CustomerException;
+import com.masai.Exception.LoginException;
+import com.masai.Exception.OperatorException;
+
+public interface operatorService {
+
+	public CurrentOperatorSession loginOperator(Login login) throws OperatorException, LoginException;
+
+	public Issue addCustomerIssue(Issue issue, int customerId) throws OperatorException,CustomerException;
+
+	public String sendIntimidationEmailToCustomer(Integer issueId, int customerId) throws OperatorException;
+
+	public Issue modifyCustomerIssue(Issue issue, int issueId) throws OperatorException;
+
+	public String sendModificationEmailToCustomer(int issueId, int customerId) throws OperatorException;
+
+	public void closeCustomerIssue(Issue issue, int issueId) throws OperatorException;
+
+	public Customer findCustomerById(int customerId) throws OperatorException;
+
+	public List<Customer> findCustomerByName(String fName) throws OperatorException;
+
+	public Customer findCustomerByEmail(String email) throws OperatorException;
+
+	public boolean lockCustomer(int  customerId) throws OperatorException, CustomerException;
+
+}

@@ -1,13 +1,10 @@
 package com.masai.Service;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.masai.Entity.Call;
 import com.masai.Entity.Customer;
 import com.masai.Entity.Issue;
 
@@ -16,7 +13,6 @@ import com.masai.Entity.IssueStatus;
 import com.masai.Entity.Login;
 import com.masai.Exception.CustomerException;
 import com.masai.Exception.IssueException;
-import com.masai.Exception.OperatorException;
 import com.masai.Repository.CustomerRepository;
 import com.masai.Repository.IssueRepository;
 
@@ -32,27 +28,6 @@ public class CustomerServiceImpl implements  CustomerService{
 	@Autowired
 	private IssueRepository ir;
 	
-	@Override
-	public Issue addCustomerIssue(Issue issue, int CustomerId) throws OperatorException,CustomerException {
-    Customer customer = cr.findById(CustomerId).get();
-    if(customer == null) {
-    	throw new CustomerException("Customer Not Found!");
-    }
-		if (issue == null) {
-			throw new OperatorException("Issue can't be null");
-		}
-          Call call = new Call();
-          call.setCallDate(LocalDate.now());
-          call.setCallDuration(2.3);
-          call.setPhoneNumber(customer.getMobile());
-          call.setOperator(null);
-//          call.setLocalDate.now
-//		setCallDuration--manual
-//		setPhoneNo(cus.getMobNo)
-//		setOperator
-		return ir.save(issue);
-
-	}
 	@Override
 	public Customer registerCustomer(Customer customer) throws CustomerException {
 		// TODO Auto-generated method stub

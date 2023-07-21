@@ -2,6 +2,7 @@ package com.masai.Controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,42 +18,48 @@ import com.masai.Exception.LoginException;
 import com.masai.Exception.OperatorException;
 import com.masai.Service.AdminService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class Controller {
-	// Add Operator
+
+	@Autowired
 	AdminService adminService;
+
+	// Add Operator
 	@PostMapping("/operators")
-	public ResponseEntity<Operator> addOperator(@RequestBody Operator operator) throws LoginException {
-	    Operator savedOperator = adminService.addOperator(operator);
-	    return new ResponseEntity<>(savedOperator, HttpStatus.CREATED);
+	public ResponseEntity<Operator> addOperator(@Valid @RequestBody Operator operator) throws LoginException {
+		Operator savedOperator = adminService.addOperator(operator);
+		return new ResponseEntity<Operator>(savedOperator, HttpStatus.CREATED);
 	}
 
 	// Remove Operator by ID
 	@DeleteMapping("/operators/{id}")
 	public ResponseEntity<Operator> removeOperator(@PathVariable int id) throws OperatorException, Exception {
-	    Operator removedOperator = adminService.removeOperatorById(id);
-	    return new ResponseEntity<Operator>(removedOperator, HttpStatus.OK);
+		Operator removedOperator = adminService.removeOperatorById(id);
+		return new ResponseEntity<Operator>(removedOperator, HttpStatus.OK);
 	}
 
 	// Modify Operator
 	@PutMapping("/operators/{id}")
-	public ResponseEntity<Operator> modifyOperator(@PathVariable int id, @RequestBody Operator operator) throws OperatorException, LoginException {
-	    Operator modifiedOperator = adminService.modifyOperator(id);
-	    return new ResponseEntity<Operator>(modifiedOperator, HttpStatus.OK);
+	public ResponseEntity<Operator> modifyOperator(@PathVariable int id, @Valid @RequestBody Operator operator)
+			throws OperatorException, LoginException {
+		Operator modifiedOperator = adminService.modifyOperator(id, operator);
+		return new ResponseEntity<Operator>(modifiedOperator, HttpStatus.OK);
 	}
 
 	// Find Operator by ID
 	@GetMapping("/operators/{id}")
 	public ResponseEntity<Operator> findOperatorById(@PathVariable int id) throws OperatorException, LoginException {
-	    Operator operator = adminService.findOperatorById(id);
-	    return new ResponseEntity<>(operator, HttpStatus.OK);
+		Operator operator = adminService.findOperatorById(id);
+		return new ResponseEntity<Operator>(operator, HttpStatus.OK);
 	}
 
 	// Get All Operators
 	@GetMapping("/operators")
 	public ResponseEntity<List<Operator>> getAllOperators() throws LoginException {
-	    List<Operator> allOperators = adminService.getAllOperators();
-	    return new ResponseEntity<>(allOperators, HttpStatus.OK);
+		List<Operator> allOperators = adminService.getAllOperators();
+		return new ResponseEntity<List<Operator>>(allOperators, HttpStatus.OK);
 	}
 
 }
