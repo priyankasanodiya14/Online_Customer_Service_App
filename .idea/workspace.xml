@@ -4,35 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b276a36-66c0-4c9a-a82a-4c86fcbe472c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Entity/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Entity/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Entity/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CSCErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CSCErrorDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CSCException.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CSCException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CSCGlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CSCGlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CallException.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CallException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CustomerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/CustomerException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/DeparmentExxception.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/DeparmentExxception.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/IssueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/IssueException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/LoginException.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/LoginException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/OperatorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/OperatorException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/SolutionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Exception/SolutionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Service/OperatortServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC_App/src/main/java/com/masai/Service/OperatortServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="115217f7-7ce5-42da-a712-298c5648a858" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Sk3lWwPJcR3OcAbZHgbXUzeQNy" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2SujwEcq1OaZjtg04oXUrNMcYfB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,60 +38,19 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/deluxe-change-1738",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
+    "last_opened_file_path": "C:/Users/Arfaat/Desktop/project/projectSB201",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6b276a36-66c0-4c9a-a82a-4c86fcbe472c" name="Changes" comment="" />
-      <created>1689676903055</created>
+      <changelist id="115217f7-7ce5-42da-a712-298c5648a858" name="Changes" comment="" />
+      <created>1690003596675</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1689676903055</updated>
+      <updated>1690003596675</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="User">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="*" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="user">
-                    <value>
-                      <list>
-                        <option value="*" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

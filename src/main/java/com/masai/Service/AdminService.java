@@ -1,0 +1,32 @@
+package com.masai.Service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.masai.Entity.Department;
+import com.masai.Entity.Operator;
+import com.masai.Exception.DepartmentException;
+import com.masai.Exception.LoginException;
+import com.masai.Exception.OperatorException;
+
+
+public interface AdminService {
+	Department addDepartment(Department department) throws LoginException;
+
+	Department removeDepartment(int departmentId) throws DepartmentException, LoginException;
+
+	Department modifyDepartment(int deparmentId,String name) throws DepartmentException, LoginException;
+
+	Department findDepartmentById(int deparmentId) throws DepartmentException, LoginException;
+
+	Operator addOperator(Operator operator,int departId) throws LoginException, DepartmentException;
+
+	Operator removeOperatorById(int operatorId) throws OperatorException, LoginException;
+
+	Operator modifyOperator(int operatorId,Operator operator) throws OperatorException, LoginException;
+
+	Operator findOperatorById(int idoperatorId) throws OperatorException, LoginException;
+
+	List<Operator> getAllOperators() throws LoginException;
+}
