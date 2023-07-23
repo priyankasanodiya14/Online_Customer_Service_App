@@ -1,54 +1,46 @@
-package com.masai.Service;
-
-import java.util.Collection;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Service;
-
-@Service
-public class ManualUserDetailsService implements UserDetails {
-
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getPassword() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-}
+//package com.masai.Service;
+//
+//import java.util.ArrayList;
+//import java.util.List;
+//import java.util.Optional;
+//
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.authority.SimpleGrantedAuthority;
+//import org.springframework.security.core.userdetails.User;
+//import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.userdetails.UserDetailsService;
+//import org.springframework.security.core.userdetails.UsernameNotFoundException;
+//import org.springframework.stereotype.Service;
+//
+//import com.masai.Entity.Login;
+//import com.masai.Repository.LoginRepository;
+//
+//
+//public class ManualUserDetailsService implements UserDetailsService {
+//    
+//	@Autowired
+//	 private LoginRepository loginRepository;
+//	@Override
+//	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//		
+//		 Optional<Login> user = loginRepository.findByUsername(username);
+//		 
+//		 if(user.isEmpty()) throw new UsernameNotFoundException("User not found");
+//		 Login us = user.get();
+//		 
+////		when we want to check manually
+////		ManualUserDetails manualUserDetails = new ManualUserDetails(us);
+////		return manualUserDetails;
+//		
+//		 
+//		List<GrantedAuthority> authorities = new ArrayList<>() ;
+//		SimpleGrantedAuthority autho = new SimpleGrantedAuthority("ROLE_"+us.getType().toUpperCase()) ;
+//		authorities.add(autho) ;
+//		org.springframework.security.core.userdetails.User secUser = new User(us.getUsername(), us.getPassword(),  authorities) ;
+//		return secUser ;
+//
+//		
+//	}
+//
+//}

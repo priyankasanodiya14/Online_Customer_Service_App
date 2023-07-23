@@ -1,6 +1,7 @@
 package com.masai.Entity;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -16,13 +17,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Solution {
-	 @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private int solutionId;
-	    private String solutionDescription;
-	    private Date solutionDate;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int solutionId;
+    private String solutionDescription;
+    private LocalDate solutionDate;
 
-	    @OneToOne(fetch = FetchType.LAZY)
-	    @JoinColumn(name = "issue_id")
-	    private Issue issue;
+    @OneToOne(fetch = FetchType.LAZY)
+    private Issue issue;
+
 }

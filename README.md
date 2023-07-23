@@ -1,6 +1,8 @@
 # deluxe-change-1738
 
-# Online Customer Service Support .
+
+# Online Customer Service Support
+
 
 <img
   align="right"
@@ -13,22 +15,9 @@ This project is an online customer service center built with Spring Boot. It pro
 
 ## Tech Stack
 
-- Java
-- Hibernate
-- Spring Framework
-- Spring Boot
-- Spring Data JPA
-- Spring Boot Validation
-- Spring Boot Web
-- Spring Boot DevTools
-- Postman
-- MySQL Database
-- Maven
-- Swagger UI
-- Lombok
-- HTML
-- CSS
-- JavaScript
+
+#### Java | Hibernate | Spring Boot | Spring Framework | Spring Data JPA | Spring Boot Validation | Spring Boot Web | Spring Boot DevTools| Postman | MySQL Database | Maven | Swagger UI | Lombok | HTML | CSS | JavaScript
+
 
 ## Modules
 - Login Module

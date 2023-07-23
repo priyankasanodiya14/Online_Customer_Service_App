@@ -1,7 +1,7 @@
 package com.masai.Entity;
 
 public enum IssueStatus {
-
-	PENDING,
-	RESOLVED
+    OPEN,
+    PENDING,
+    RESOLVED
 }

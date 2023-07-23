@@ -1,24 +1,20 @@
 package com.masai.Service;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.masai.Entity.Call;
 import com.masai.Entity.Customer;
 import com.masai.Entity.Issue;
-
 import com.masai.Entity.IssueStatus;
-
-import com.masai.Entity.Login;
+import com.masai.Entity.LoginDTO;
 import com.masai.Exception.CustomerException;
 import com.masai.Exception.IssueException;
-import com.masai.Exception.OperatorException;
 import com.masai.Repository.CustomerRepository;
 import com.masai.Repository.IssueRepository;
+import com.masai.Repository.LoginRepository;
+import com.masai.Utility.generatorOtp;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,109 +23,101 @@ import lombok.extern.slf4j.Slf4j;
 public class CustomerServiceImpl implements  CustomerService{
 
 	@Autowired
-	private CustomerRepository cr;
-	
-	@Autowired
-	private IssueRepository ir;
-	
-	@Override
-	public Issue addCustomerIssue(Issue issue, int CustomerId) throws OperatorException,CustomerException {
-    Customer customer = cr.findById(CustomerId).get();
-    if(customer == null) {
-    	throw new CustomerException("Customer Not Found!");
-    }
-		if (issue == null) {
-			throw new OperatorException("Issue can't be null");
-		}
-          Call call = new Call();
-          call.setCallDate(LocalDate.now());
-          call.setCallDuration(2.3);
-          call.setPhoneNumber(customer.getMobile());
-          call.setOperator(null);
-//          call.setLocalDate.now
-//		setCallDuration--manual
-//		setPhoneNo(cus.getMobNo)
-//		setOperator
-		return ir.save(issue);
+	private CustomerRepository customerRepository;
 
-	}
+	@Autowired
+	IssueRepository ir;
+
+	@Autowired
+	LoginRepository lr;
+	
+//	@Autowired
+//	PasswordEncoder passwordEncoder;
+	
 	@Override
 	public Customer registerCustomer(Customer customer) throws CustomerException {
-		// TODO Auto-generated method stub
-		if(customer  == null) throw new CustomerException("Customer is not Valid");
-		
-		List<Customer> customerlist = cr.findAll();
-		
-		for(Customer c:customerlist) {
-			if(c.getEmail().equals(customer.getEmail())) {
-				throw new CustomerException("Customer with given Email Already Exist");
+		customer.setUsername(customer.getEmail());
+		return customerRepository.save(customer);
+	}
+
+	@Override
+	public Issue viewlssueByld(int cid, int issueId) throws IssueException, CustomerException {
+
+		Customer c = customerRepository.findById(cid).orElseThrow(()-> new CustomerException("Customer Not Found"));
+
+		List<Issue> lis = c.getIssues();
+
+		for(Issue i: lis){
+			if(i.getIssueId() == issueId){
+				return i;
 			}
 		}
-		
-		
 
-		return cr.save(customer);
+		throw new IssueException("Issue Not Found");
 	}
 
 	@Override
-	public Issue viewlssueByld(Integer issueId) throws IssueException {
-		// TODO Auto-generated method stub
-
-		Issue issue = ir.findById(issueId).orElseThrow(() -> new IssueException("Issue Not Found"));
-
-		return issue;
+	public Issue registerIssue(int cid, Issue issue) throws IssueException, CustomerException {
+		Customer c = customerRepository.findById(cid).orElseThrow(()-> new CustomerException("Customer Not Found"));
+		List<Issue> lis = c.getIssues();
+		lis.add(issue);
+		c.setIssues(lis);
+		issue.setCustomer(c);
+		customerRepository.save(c);
+		return ir.save(issue);
 	}
 
 	@Override
-	public Issue reopenlssue(Integer customerId, String issueId) throws IssueException, CustomerException {
-
-
-		Customer customer = cr.findById(customerId).orElseThrow(() -> new CustomerException("Customer Not Found"));
-
-		List<Issue> issues = customer.getIssues();
-
-		Issue issue = issues.stream().filter(issuee -> issuee.getIssueId().equals(issueId)).findFirst()
-				.orElseThrow(() -> new IssueException("Issue Not Found"));
-
-		if (issue.getIssueStatus() == IssueStatus.PENDING)
-			throw new IssueException("Issue is Already Opened Please wait for response");
-
-		issue.setIssueStatus(IssueStatus.PENDING);
-
-
+	public Issue reopenlssue(int customerId, int issueId) throws IssueException, CustomerException {
+		Customer c = customerRepository.findById(customerId).orElseThrow(()-> new CustomerException("Customer Not Found"));
+		Issue issue = ir.findById(issueId).orElseThrow(()-> new IssueException("Issue Not Found"));
+		if (issue.getIssueStatus().equals(IssueStatus.OPEN)){
+			throw new IssueException("Issue is Already Open");
+		}
+		issue.setIssueStatus(IssueStatus.OPEN);
 		return ir.save(issue);
 	}
 
 	@Override
 	public List<Issue> viewAllIssues(int customerId) throws CustomerException, IssueException {
-		// TODO Auto-generated method stub
 
-	
-		Customer c = cr.findById(customerId).orElseThrow(()->new CustomerException("Customer Not Found"));
-		if(c.getIssues().size() == 0) {
+		Customer c = customerRepository.findById(customerId).orElseThrow(()-> new CustomerException("Customer Not Found"));
 
-			throw new IssueException("No issue Found");
+		List<Issue> lis = c.getIssues();
+		if(lis.size() == 0){
+			throw new IssueException("No Issue Fonud if you want then raise a issue");
 		}
-		return c.getIssues();
+
+		return lis;
 	}
 
 	@Override
-	public String changePassword(Login l) {
-		// TODO Auto-generated method stub
+	public String changePassword(int customerId, String newPassword, String oldPassword) throws CustomerException {
 
-		return null;
+
+	    Customer c = customerRepository.findById(customerId).get();
+	     if(c==null) throw new CustomerException("customer not found");
+	     if(c.getPassword()==oldPassword) {
+	    	 c.setPassword(newPassword);
+	     }
+	    customerRepository.save(c);
+	    return "Password Updated!";
 	}
 
 	@Override
-	public String forgotPassword(Integer CustomerID) {
-		// TODO Auto-generated method stub
-		return null;
+	public int forgotPassword(LoginDTO loginDTO,String mobile) throws CustomerException {
+
+		Customer c = customerRepository.findById(loginDTO.getLoginId()).orElseThrow(()-> new CustomerException("Customer Not Found"));
+
+		int otp = generatorOtp.generate();
+		String cmobile = c.getMobile();
+		if(cmobile.equals(mobile)){
+			c.setPassword(loginDTO.getNewPass());
+			customerRepository.save(c);
+			return otp;
+		}
+		throw new CustomerException("Mobile Not Found");
 	}
 
-	@Override
-	public Customer emailPassword(Integer CustomerID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }
