@@ -1,4 +1,4 @@
-package com.masai.utility;
+package com.masai.Utility;
 
 import java.util.Arrays;
 import java.util.Collections;

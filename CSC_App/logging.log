@@ -1063,3 +1063,38 @@ Consider defining a bean of type 'org.springframework.security.crypto.password.P
 2023-09-27T02:25:20.195+05:30  INFO 10560 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-09-27T02:25:20.196+05:30  INFO 10560 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-09-27T02:25:20.204+05:30  INFO 10560 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-27T22:10:11.906+05:30  INFO 10352 --- [main] com.masai.CscAppApplication              : Starting CscAppApplication using Java 17.0.7 with PID 10352 (C:\Users\Admin\Desktop\Online_Customer_Service_App\CSC_App\target\classes started by Admin in C:\Users\Admin\Desktop\Online_Customer_Service_App\CSC_App)
+2023-09-27T22:10:11.911+05:30  INFO 10352 --- [main] com.masai.CscAppApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-27T22:10:13.137+05:30  INFO 10352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-27T22:10:13.222+05:30  INFO 10352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 8 JPA repository interfaces.
+2023-09-27T22:10:13.705+05:30  INFO 10352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-27T22:10:13.717+05:30  INFO 10352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-27T22:10:13.718+05:30  INFO 10352 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-09-27T22:10:13.823+05:30  INFO 10352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-27T22:10:13.824+05:30  INFO 10352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1803 ms
+2023-09-27T22:10:13.996+05:30  INFO 10352 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-27T22:10:14.080+05:30  INFO 10352 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-09-27T22:10:14.084+05:30  INFO 10352 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-27T22:10:14.324+05:30  INFO 10352 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-27T22:10:14.581+05:30  INFO 10352 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-27T22:10:14.613+05:30  INFO 10352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-27T22:10:15.106+05:30  INFO 10352 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5788722f
+2023-09-27T22:10:15.108+05:30  INFO 10352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-27T22:10:15.218+05:30  INFO 10352 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.28
+2023-09-27T22:10:15.581+05:30  INFO 10352 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-27T22:10:16.388+05:30  INFO 10352 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-27T22:10:16.545+05:30  INFO 10352 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-27T22:10:17.362+05:30  WARN 10352 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-27T22:10:18.617+05:30  INFO 10352 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@56114349, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46c28400, org.springframework.security.web.context.SecurityContextHolderFilter@4d65fbad, org.springframework.security.web.header.HeaderWriterFilter@74ea1cd0, org.springframework.web.filter.CorsFilter@2d6abfc7, org.springframework.security.web.authentication.logout.LogoutFilter@31b827a6, com.masai.Utility.JwtTokenValidatorFilter@4f5d587c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@29f72685, com.masai.Utility.JwtTokenGeneratorFilter@138a51d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2df0a4c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a097a83, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@413a2520, org.springframework.security.web.session.SessionManagementFilter@543b855, org.springframework.security.web.access.ExceptionTranslationFilter@475a8415, org.springframework.security.web.access.intercept.AuthorizationFilter@7a087132]
+2023-09-27T22:10:19.159+05:30  INFO 10352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-27T22:10:19.176+05:30  INFO 10352 --- [main] com.masai.CscAppApplication              : Started CscAppApplication in 7.844 seconds (process running for 8.835)
+2023-09-27T22:10:53.802+05:30  INFO 10352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-27T22:10:53.803+05:30  INFO 10352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-27T22:10:53.806+05:30  INFO 10352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-09-27T22:10:54.835+05:30  INFO 10352 --- [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 494 ms
+2023-09-27T22:13:40.071+05:30  INFO 10352 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-09-27T22:13:40.102+05:30  INFO 10352 --- [RMI TCP Connection(13)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-27T22:13:40.105+05:30  INFO 10352 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-27T22:13:40.124+05:30  INFO 10352 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-27T22:13:40.127+05:30  INFO 10352 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-27T22:13:40.153+05:30  INFO 10352 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

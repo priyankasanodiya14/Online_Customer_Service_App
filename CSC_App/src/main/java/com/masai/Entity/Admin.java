@@ -1,6 +1,6 @@
 package com.masai.Entity;
 
-import com.masai.utility.generatorOtp;
+import com.masai.Utility.generatorOtp;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.Email;

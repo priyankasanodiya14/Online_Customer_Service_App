@@ -1,4 +1,4 @@
-package com.masai.utility;
+package com.masai.Utility;
 
 public interface SecurityDetails {
 	

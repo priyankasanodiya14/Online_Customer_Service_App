@@ -15,7 +15,7 @@ import com.masai.Exception.IssueException;
 import com.masai.Repository.CustomerRepository;
 import com.masai.Repository.IssueRepository;
 import com.masai.Repository.LoginRepository;
-import com.masai.utility.generatorOtp;
+import com.masai.Utility.generatorOtp;
 
 import lombok.extern.slf4j.Slf4j;
 
