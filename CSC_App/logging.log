@@ -235,3 +235,156 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2023-11-03T11:36:26.268+05:30  INFO 10532 --- [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-11-03T11:36:26.270+05:30  INFO 10532 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-11-03T11:36:26.280+05:30  INFO 10532 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-03T12:00:24.936+05:30  INFO 8564 --- [main] com.masai.CscAppApplication              : Starting CscAppApplication using Java 17.0.7 with PID 8564 (C:\Users\Admin\Desktop\Online_Customer_Service_App\CSC_App\target\classes started by Admin in C:\Users\Admin\Desktop\Online_Customer_Service_App\CSC_App)
+2023-11-03T12:00:24.941+05:30 DEBUG 8564 --- [main] com.masai.CscAppApplication              : Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-11-03T12:00:24.943+05:30  INFO 8564 --- [main] com.masai.CscAppApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-11-03T12:00:26.195+05:30  INFO 8564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-03T12:00:26.295+05:30  INFO 8564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 8 JPA repository interfaces.
+2023-11-03T12:00:26.994+05:30  INFO 8564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-03T12:00:27.008+05:30  INFO 8564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-03T12:00:27.008+05:30  INFO 8564 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-11-03T12:00:27.122+05:30  INFO 8564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-03T12:00:27.123+05:30  INFO 8564 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2090 ms
+2023-11-03T12:00:27.181+05:30 DEBUG 8564 --- [main] c.masai.Utility.JwtTokenGeneratorFilter  : Filter 'jwtTokenGeneratorFilter' configured for use
+2023-11-03T12:00:27.361+05:30  INFO 8564 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-03T12:00:27.476+05:30  INFO 8564 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-11-03T12:00:27.480+05:30  INFO 8564 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-03T12:00:27.696+05:30  INFO 8564 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-03T12:00:27.902+05:30  INFO 8564 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-03T12:00:27.926+05:30  INFO 8564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-03T12:00:28.240+05:30  INFO 8564 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75e4fe3c
+2023-11-03T12:00:28.242+05:30  INFO 8564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-03T12:00:28.337+05:30  INFO 8564 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.28
+2023-11-03T12:00:28.663+05:30  INFO 8564 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-03T12:00:29.647+05:30  INFO 8564 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-03T12:00:29.952+05:30  INFO 8564 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-03T12:00:30.545+05:30  WARN 8564 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-03T12:00:31.226+05:30  INFO 8564 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@87cb1d8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14d7a962, org.springframework.security.web.context.SecurityContextHolderFilter@65d3e2ba, org.springframework.security.web.header.HeaderWriterFilter@51751265, org.springframework.web.filter.CorsFilter@324afa73, org.springframework.security.web.authentication.logout.LogoutFilter@4d65fbad, com.masai.Utility.JwtTokenValidatorFilter@106e6dfe, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2387e60b, com.masai.Utility.JwtTokenGeneratorFilter@7df1fc5a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@136a5572, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d140627, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5444c63f, org.springframework.security.web.session.SessionManagementFilter@2ff2a096, org.springframework.security.web.access.ExceptionTranslationFilter@718b9d56, org.springframework.security.web.access.intercept.AuthorizationFilter@6124a7c0]
+2023-11-03T12:00:31.651+05:30  INFO 8564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-03T12:00:31.667+05:30  INFO 8564 --- [main] com.masai.CscAppApplication              : Started CscAppApplication in 7.418 seconds (process running for 8.273)
+2023-11-03T12:00:36.839+05:30  INFO 8564 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-03T12:00:36.839+05:30  INFO 8564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-03T12:00:36.840+05:30  INFO 8564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-03T12:00:36.849+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2023-11-03T12:00:36.861+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-11-03T12:00:36.870+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2023-11-03T12:01:09.421+05:30 DEBUG 8564 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2023-11-03T12:01:09.422+05:30 DEBUG 8564 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-11-03T12:01:09.424+05:30 DEBUG 8564 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2023-11-03T12:01:09.788+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2023-11-03T12:01:09.789+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-11-03T12:01:09.793+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2023-11-03T12:01:09.844+05:30 DEBUG 8564 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2023-11-03T12:01:09.845+05:30 DEBUG 8564 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-11-03T12:01:09.845+05:30 DEBUG 8564 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2023-11-03T12:01:10.226+05:30  INFO 8564 --- [http-nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 365 ms
+2023-11-03T12:02:50.038+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /customers/
+2023-11-03T12:02:50.039+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-11-03T12:02:50.040+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /customers/
+2023-11-03T12:03:30.032+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /customers/signin
+2023-11-03T12:03:30.402+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-11-03T12:03:30.402+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=c2@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
+2023-11-03T12:03:30.434+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /customers/signin
+2023-11-03T12:05:11.747+05:30 DEBUG 8564 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /customers/raiseIssue/2
+2023-11-03T12:05:11.775+05:30 DEBUG 8564 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /customers/raiseIssue/2
+2023-11-03T12:05:45.651+05:30 DEBUG 8564 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /customers/viewAllIssue/1
+2023-11-03T12:05:45.653+05:30 DEBUG 8564 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /customers/viewAllIssue/1
+2023-11-03T12:06:00.745+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /customers/viewAllIssue/2
+2023-11-03T12:06:00.748+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /customers/viewAllIssue/2
+2023-11-03T12:06:37.015+05:30 DEBUG 8564 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /customers/raiseIssue/2
+2023-11-03T12:06:37.019+05:30 DEBUG 8564 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /customers/raiseIssue/2
+2023-11-03T12:06:59.231+05:30 DEBUG 8564 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /customers/raiseIssue/2
+2023-11-03T12:06:59.235+05:30 DEBUG 8564 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /customers/raiseIssue/2
+2023-11-03T12:07:22.363+05:30 DEBUG 8564 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /customers/viewAllIssue/2
+2023-11-03T12:07:22.365+05:30 DEBUG 8564 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /customers/viewAllIssue/2
+2023-11-03T12:09:21.059+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /admin/
+2023-11-03T12:09:21.059+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-11-03T12:09:21.060+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /admin/
+2023-11-03T12:09:48.448+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /admin/signin
+2023-11-03T12:09:48.543+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-11-03T12:09:48.543+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=a1@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2023-11-03T12:09:48.543+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /admin/signin
+2023-11-03T12:12:09.522+05:30 DEBUG 8564 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /admin/addDepartments
+2023-11-03T12:12:09.525+05:30 DEBUG 8564 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /admin/addDepartments
+2023-11-03T12:12:09.528+05:30  INFO 8564 --- [http-nio-8080-exec-2] com.masai.Service.AdminServiceImpl       : Department Added
+2023-11-03T12:12:56.302+05:30 DEBUG 8564 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /admin/addDepartments
+2023-11-03T12:12:56.306+05:30 DEBUG 8564 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /admin/addDepartments
+2023-11-03T12:12:56.307+05:30  INFO 8564 --- [http-nio-8080-exec-4] com.masai.Service.AdminServiceImpl       : Department Added
+2023-11-03T12:13:22.469+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /admin/addDepartments
+2023-11-03T12:13:22.472+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /admin/addDepartments
+2023-11-03T12:13:22.473+05:30  INFO 8564 --- [http-nio-8080-exec-5] com.masai.Service.AdminServiceImpl       : Department Added
+2023-11-03T12:16:14.936+05:30 DEBUG 8564 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /admin/addOperator
+2023-11-03T12:16:14.940+05:30 DEBUG 8564 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /admin/addOperator
+2023-11-03T12:16:38.227+05:30 DEBUG 8564 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /admin/departments/1
+2023-11-03T12:16:38.231+05:30 DEBUG 8564 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /admin/departments/1
+2023-11-03T12:16:38.232+05:30  INFO 8564 --- [http-nio-8080-exec-7] com.masai.Service.AdminServiceImpl       : Department findDepartmentById method called
+2023-11-03T12:18:11.453+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /admin/operators/1
+2023-11-03T12:18:11.457+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /admin/operators/1
+2023-11-03T12:18:11.472+05:30  WARN 8564 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2023-11-03T12:18:11.472+05:30 ERROR 8564 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'op1@gmail.com' for key 'login.UK_3svxcq6q51yfdg253l6x3dget'
+2023-11-03T12:19:02.487+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /admin/operators/1
+2023-11-03T12:19:02.489+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /admin/operators/1
+2023-11-03T12:19:42.164+05:30 DEBUG 8564 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /operator/signin
+2023-11-03T12:19:42.166+05:30 DEBUG 8564 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-11-03T12:19:42.167+05:30 DEBUG 8564 --- [http-nio-8080-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2023-11-03T12:19:42.167+05:30 DEBUG 8564 --- [http-nio-8080-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@63c908b8
+2023-11-03T12:19:42.170+05:30 DEBUG 8564 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2023-11-03T12:19:42.170+05:30 DEBUG 8564 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-11-03T12:19:42.170+05:30 DEBUG 8564 --- [http-nio-8080-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2023-11-03T12:19:42.170+05:30 DEBUG 8564 --- [http-nio-8080-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@63c908b8
+2023-11-03T12:20:09.628+05:30 DEBUG 8564 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /operator/signin
+2023-11-03T12:20:09.725+05:30 DEBUG 8564 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-11-03T12:20:09.725+05:30 DEBUG 8564 --- [http-nio-8080-exec-2] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=op1@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_OPERATOR]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_OPERATOR]]
+2023-11-03T12:20:09.726+05:30 DEBUG 8564 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /operator/signin
+2023-11-03T12:21:11.355+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing PUT /operator/modifyIssue/1/1/OPEN
+2023-11-03T12:21:11.358+05:30 DEBUG 8564 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured PUT /operator/modifyIssue/1/1/OPEN
+2023-11-03T12:21:38.253+05:30 DEBUG 8564 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing PUT /operator/modifyIssue/1/1/RESOLVED
+2023-11-03T12:21:38.256+05:30 DEBUG 8564 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured PUT /operator/modifyIssue/1/1/RESOLVED
+2023-11-03T12:22:07.290+05:30 DEBUG 8564 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing PUT /operator/closeIssue/2
+2023-11-03T12:22:07.295+05:30 DEBUG 8564 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured PUT /operator/closeIssue/2
+2023-11-03T12:22:12.038+05:30 DEBUG 8564 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing PUT /operator/closeIssue/2
+2023-11-03T12:22:12.040+05:30 DEBUG 8564 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured PUT /operator/closeIssue/2
+2023-11-03T12:22:23.198+05:30 DEBUG 8564 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing PUT /operator/closeIssue/1
+2023-11-03T12:22:23.202+05:30 DEBUG 8564 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured PUT /operator/closeIssue/1
+2023-11-03T12:22:57.435+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /operator/findCustomerById/1
+2023-11-03T12:22:57.438+05:30 DEBUG 8564 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /operator/findCustomerById/1
+2023-11-03T12:23:23.950+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /operator/findByUsername/Email?Email=c1%40gmail.com
+2023-11-03T12:23:23.953+05:30 DEBUG 8564 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /operator/findByUsername/Email?Email=c1%40gmail.com
+2023-11-03T12:23:51.267+05:30  INFO 8564 --- [RMI TCP Connection(33)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-03T12:23:51.282+05:30  INFO 8564 --- [RMI TCP Connection(33)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-03T12:23:51.282+05:30  INFO 8564 --- [RMI TCP Connection(33)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-03T12:23:51.282+05:30  INFO 8564 --- [RMI TCP Connection(33)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-03T12:23:51.282+05:30  INFO 8564 --- [RMI TCP Connection(33)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-03T12:23:51.298+05:30  INFO 8564 --- [RMI TCP Connection(33)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-03T18:27:40.234+05:30  INFO 2544 --- [main] com.masai.CscAppApplication              : Starting CscAppApplication using Java 17.0.7 with PID 2544 (C:\Users\Admin\Desktop\Online_Customer_Service_App\CSC_App\target\classes started by Admin in C:\Users\Admin\Desktop\Online_Customer_Service_App\CSC_App)
+2023-11-03T18:27:40.244+05:30 DEBUG 2544 --- [main] com.masai.CscAppApplication              : Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-11-03T18:27:40.253+05:30  INFO 2544 --- [main] com.masai.CscAppApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-11-03T18:27:45.657+05:30  INFO 2544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-03T18:27:46.255+05:30  INFO 2544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 542 ms. Found 8 JPA repository interfaces.
+2023-11-03T18:27:48.474+05:30  INFO 2544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-03T18:27:48.496+05:30  INFO 2544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-03T18:27:48.497+05:30  INFO 2544 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-11-03T18:27:48.800+05:30  INFO 2544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-03T18:27:48.800+05:30  INFO 2544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8185 ms
+2023-11-03T18:27:48.927+05:30 DEBUG 2544 --- [main] c.masai.Utility.JwtTokenGeneratorFilter  : Filter 'jwtTokenGeneratorFilter' configured for use
+2023-11-03T18:27:49.188+05:30  INFO 2544 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-03T18:27:49.325+05:30  INFO 2544 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-11-03T18:27:49.332+05:30  INFO 2544 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-03T18:27:49.718+05:30  INFO 2544 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-03T18:27:50.040+05:30  INFO 2544 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-03T18:27:50.074+05:30  INFO 2544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-03T18:27:50.540+05:30  INFO 2544 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65ef9a0a
+2023-11-03T18:27:50.543+05:30  INFO 2544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-03T18:27:50.658+05:30  INFO 2544 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 8.0.28
+2023-11-03T18:27:50.957+05:30  INFO 2544 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-03T18:27:52.145+05:30  INFO 2544 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-03T18:27:52.651+05:30  INFO 2544 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-03T18:27:53.611+05:30  WARN 2544 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-03T18:27:54.182+05:30  INFO 2544 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14d7a962, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@324afa73, org.springframework.security.web.context.SecurityContextHolderFilter@5f9f1886, org.springframework.security.web.header.HeaderWriterFilter@7f59f4e4, org.springframework.web.filter.CorsFilter@106e6dfe, org.springframework.security.web.authentication.logout.LogoutFilter@55fc6344, com.masai.Utility.JwtTokenValidatorFilter@7df1fc5a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@41acf2f1, com.masai.Utility.JwtTokenGeneratorFilter@5444c63f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11548363, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@386ec37d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31b827a6, org.springframework.security.web.session.SessionManagementFilter@59c2bf78, org.springframework.security.web.access.ExceptionTranslationFilter@36a59d8, org.springframework.security.web.access.intercept.AuthorizationFilter@77a13162]
+2023-11-03T18:27:54.510+05:30  INFO 2544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-03T18:27:54.527+05:30  INFO 2544 --- [main] com.masai.CscAppApplication              : Started CscAppApplication in 15.868 seconds (process running for 18.371)
+2023-11-03T18:28:03.583+05:30  INFO 2544 --- [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-03T18:28:03.603+05:30  INFO 2544 --- [RMI TCP Connection(7)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-03T18:28:03.611+05:30  INFO 2544 --- [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-03T18:28:03.612+05:30  INFO 2544 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-03T18:28:03.622+05:30  INFO 2544 --- [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

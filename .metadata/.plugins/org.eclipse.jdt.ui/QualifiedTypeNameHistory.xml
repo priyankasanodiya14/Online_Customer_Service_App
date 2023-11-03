@@ -1,15 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="com.masai.Repository.OperatorRepository"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
-    <fullyQualifiedTypeName name="com.masai.Repository.CurrentOperatorSessionRepository"/>
-    <fullyQualifiedTypeName name="com.masai.Entity.Operator"/>
-    <fullyQualifiedTypeName name="com.masai.Entity.CurrentOperatorSession"/>
-    <fullyQualifiedTypeName name="com.masai.Exception.LoginException"/>
-    <fullyQualifiedTypeName name="com.masai.Entity.Login"/>
-    <fullyQualifiedTypeName name="com.masai.Entity.IssueStatus"/>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>
