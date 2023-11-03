@@ -27,36 +27,6 @@ This project is an online customer service center built with Spring Boot. It pro
 - Maven
 - MySQL Server
 
-
-
-
-<h1 align = "center"> Some functionalities images </h1>
-<h2 align = "center"> ** Admin Controller **</h2>
-
-
-![image]()
-
-
-<h2 align = "center"> ** Customer Controller  **</h2>
-
-
-![image]()
-
-
-<h2 align = "center"> **Operator Controller **</h2>
-
-
-![image]()
-
-
-<h2 align = "center"> **Login Controller **</h2>
-
-
-![image]()
-
-
-
-
 ## Installation & Run
 ```bash
 # To run this project locally:
@@ -80,6 +50,8 @@ java -jar target/decisive-iron-5903-0.0.1-SNAPSHOT.jar
 
 # Your application should be up and running at http://localhost:8080.
 ```
+## Deployed Links
+--Backend --> https://csc-production.up.railway.app/swagger-ui/index.html
 
 ## API Root Endpoint
 
