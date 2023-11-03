@@ -29,6 +29,7 @@ import lombok.NoArgsConstructor;
 public class Operator extends Login {
     
    @Column(unique = true)
+   @JsonIgnore
     private int operatorId = generatorOtp.generate();
 
     @NotNull(message = "Operator name should not be empty!")

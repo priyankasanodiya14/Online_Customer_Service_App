@@ -1,5 +1,6 @@
 package com.masai.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -21,6 +22,7 @@ import lombok.NoArgsConstructor;
 public class Login {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int loginId;
 
     @Column(unique = true)

@@ -43,7 +43,7 @@ public class OperatorController {
 //		Operator operator = operatorService.login(username, password);
 //		return new ResponseEntity<Operator>(operator, HttpStatus.CREATED);
 //	}
-	 @GetMapping("/signin")
+	 @PostMapping("/signin")
 		public ResponseEntity<String> logInUserHandler(Authentication auth) throws OperatorException{
 			 Operator opt= operatorService.findByUsername(auth.getName());
 			 return new ResponseEntity<>(opt.getUsername()+" Logged In Successfully", HttpStatus.ACCEPTED);

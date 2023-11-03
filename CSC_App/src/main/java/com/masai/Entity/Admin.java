@@ -1,5 +1,6 @@
 package com.masai.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.masai.Utility.generatorOtp;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 public class Admin extends Login {
 //	
     @Column(unique = true)
+    @JsonIgnore
     private int adminId = generatorOtp.generate();
 
     @NotNull(message = "name should not be empty!")

@@ -48,7 +48,7 @@ public class AdminController {
 //		 Login user = opt.get();
 //		 return new ResponseEntity<>(user.getUsername()+" Logged In Successfully", HttpStatus.ACCEPTED);
 //	}
-	 @GetMapping("/signin")
+	 @PostMapping("/signin")
 		public ResponseEntity<String> logInUserHandler(Authentication auth) throws  LoginException{
 			 Admin opt= adminService.findByUsername(auth.getName());
 			 return new ResponseEntity<>(opt.getUsername()+" Logged In Successfully", HttpStatus.ACCEPTED);

@@ -24,6 +24,7 @@ import lombok.NoArgsConstructor;
 public class Customer extends Login {
 //	
     @Column(unique = true)
+    @JsonIgnore
     private int customerId = generatorOtp.generate();
 
     @NotNull(message = "name should not be empty!")
