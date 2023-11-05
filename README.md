@@ -13,7 +13,7 @@ This project is an online customer service center built with Spring Boot. It pro
 
 ## Tech Stack
 
-#### Java | Hibernate | Spring Boot | Spring Framework | Spring Data JPA | Spring Boot Validation | Spring Boot Web | Spring Boot DevTools| Postman | MySQL Database | Maven | Swagger UI | Lombok | HTML | CSS | JavaScript
+#### Java | Hibernate | Spring Boot | Spring Framework | Spring Data JPA | Spring Security | Spring Boot Web | Spring Boot DevTools| Postman | MySQL Database | Maven | Swagger UI | Lombok | HTML | CSS | JavaScript
 
 ## Modules
 - Login Module
@@ -65,7 +65,7 @@ http://localhost:8080/swagger-ui/index.html
 
 ## Collaborators
 
-- [priyanka sanodiya](https://github.com/priyankasanodiya14) (Team Lead)
+- [Priyanka Sanodiya](https://github.com/priyankasanodiya14) (Team Lead)
 - [Satyanand Shrivastava](https://github.com/Satya2008)
 - [Aviraj Sawant](https://github.com/Sawantaviraj2) 
 - [Arfat Siddiqui](https://github.com/SiddiquiArfat) 
