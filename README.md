@@ -13,8 +13,7 @@ This project is an online customer service center built with Spring Boot. It pro
 
 ## Tech Stack
 
-#### Java | Hibernate | Spring Boot | Spring Framework | Spring Data JPA | Spring Security | Spring Boot Web | Spring Boot DevTools| Postman | MySQL Database | Maven | Swagger UI | Lombok | HTML | CSS | JavaScript
-
+#### Java | Spring Boot | Spring Framework | Spring Data JPA | Spring Security | Spring Boot Web | Validation | Logger | Slf4j | Spring Boot DevTools| Postman | MySQL Database | Maven | Swagger UI | Lombok |
 ## Modules
 - Login Module
 - Admin Module
