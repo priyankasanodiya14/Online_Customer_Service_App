@@ -50,7 +50,7 @@ java -jar target/decisive-iron-5903-0.0.1-SNAPSHOT.jar
 # Your application should be up and running at http://localhost:8080.
 ```
 ## Deployed Links
---Backend -->
+--Backend -->https://csc-production.up.railway.app/swagger-ui/index.html#/
 
 ## API Root Endpoint
 
